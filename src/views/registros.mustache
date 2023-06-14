@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <title>crud</title>
-
-  <!-- Bootstrap início -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <!-- Bootstrap fim -->
-
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <nav class="p-1 m-1 navbar navbar-expand-lg navbar-light bg-info d-flex justify-content-center">
-        <a class="navbar-brand p-2" href="/">CruDin</a>
-      </nav>
-    </div>
-  </header>
+{{>partials/header}}
       <div>
         <div class="col p-4 mt-5 d-flex justify-content-center">
           <h1 class="display-4">Registros</h1>
@@ -38,12 +7,12 @@
 
       <Div class="row ml-5">
         {{#registros}} 
-        <div class="col-sm-2 ml-1 mb-1">
+        <div class="col-sm-3 ml-5 mb-4">
           <div class="card">
             <div class="card-body">
               <h6 class="card-title">Id: {{ id }}</h6>
               <p class="card-text">Nome: {{ nome }}</p>
-              <a href="/registro-detalhado/{{ id }}" class="btn btn-primary">Ver mais</a>
+              <a href="/registro-detalhado/{{ id }}" class="btn btn-dark">Ver mais</a>
             </div>
           </div>
         </div>
@@ -54,8 +23,8 @@
 
       <div class="modal fade bd-example-modal-sm" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      deletado o: {{deletado}}
+    <div class="modal-content p-3">
+      Deletamos o Id: {{deletado}}
     </div>
   </div>
 </div>
